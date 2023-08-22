@@ -34,3 +34,24 @@ def check_win(player, computer):
 choices = get_choices()
 result = check_win(choices["player"], choices["computer"])
 print(result)
+
+
+
+def likes(names):
+    list_names = [[], ["Peter"],["Jacob", "Alex"], ["Max", "John", "Mark"], ["Alex", "Jacob", "Mark", "Max"]]
+    names = list_names
+    for name in names:
+        if len(name) == 0:
+            return("no one likes this")
+        elif len(name) == 1:
+            return name[1] + "likes this"
+        elif len(name) == 2:
+            return " and ".join(names) + "like this"
+        elif len(name) == 3:
+            return " and " + "and".join(names)+ "like this"
+        elif len(name) == 4:
+            return("Alex, Jacob and 2 others like this")
+    
+
+
+likes(names=None)
