@@ -121,3 +121,6 @@ def validate_and_execute():
     
 user_input = input("hey user, enter a number of days and I will convert it to hours!")
 validate_and_execute()
+
+# Error Handling
+
