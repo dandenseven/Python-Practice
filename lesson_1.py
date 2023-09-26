@@ -31,3 +31,36 @@ else:
 
 print(cost_drop_ship)
 
+
+
+import math
+
+pi = math.pi
+
+def whatpimeans(alpha = 'abcdefghijklmnopqrstuvwxyz'):
+    #create a dictionnary linking alphabet to 'secret encryption'
+    #dico = {85:'a', 24:'b',32:'c', [...],10:'z'}
+    dico = { k:v for k, v in \
+        zip([85,24,32,64,11,52,91,79,78,99,62,27,74,35,14,
+             16,66,81,19,39,13,33,45,49,95,10],
+            alpha.upper())}
+    
+    #take the number PI as string and prepare it for decoding
+    crypt = str(math.pi)
+    crypt.replace('.','')
+    code = []
+        #reverse the string and group 2 by 2 to form a list
+    for i in range(0, len(crypt), 2):
+        code += crypt[:-1][i:i+2]
+    
+    #take the modified string and try to decode
+    decrypt = ''
+    for binom in code :
+        decrypt += dico[binom]
+    
+    #stuck somewhere ? try to print() some of the steps
+    print(decrypt)
+    #hopefully...
+    return decrypt
+
+whatpimeans()

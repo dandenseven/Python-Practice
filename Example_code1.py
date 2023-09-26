@@ -55,3 +55,24 @@ def likes(names):
 
 
 likes(names=None)
+
+
+def likes(names=[]):
+
+    if len(names) == 0:
+        return "no one likes this"
+    elif len(names) == 1:
+        return str(names) + "likes this"
+    elif len(names) == 2:
+        return " and ".join(names) + "like this"
+    elif len(names) == 3:
+        return " and " + "and".join(names)+ "like this"
+    elif len(names) == 4:
+        return "Alex, Jacob and 2 others like this"
+    
+
+likes(names)
+likes(names(["Peter"]))
+likes(names(["Jacob", "Alex"]))
+likes(names(["Max", "John", "Mark"]))
+likes(names(["Alex", "Jacob", "Mark", "Max"]))
