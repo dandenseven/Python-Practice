@@ -98,6 +98,65 @@
 #Nested if else statements
 
 
+# calculation_to_units = 24
+# name_of_unit = "hours"
+
+# def days_to_units(num_of_days):
+
+    
+#         return f" {num_of_days} days are {num_of_days * calculation_to_units} {name_of_unit}"
+
+#         return " you entered a 0, please enter a valid positive number"
+
+# def validate_and_execute():
+#     if user_input.isdigit():
+#         user_input_number = int(user_input)
+#         if user_input_number > 0:
+#             calculated_value = days_to_units(user_input_number)
+#             print(calculated_value)
+#         elif user_input_number == 0:
+#             print("\you entered a 0, please enter a valid positive number")
+#     else:
+#         print("your input is not a valid number. Don't ruin my program!")
+    
+# user_input = input("hey user, enter a number of days and I will convert it to hours!")
+# validate_and_execute()
+
+#Error Handling
+
+# calculation_to_units = 24
+# name_of_unit = "hours"
+
+# def days_to_units(num_of_days):
+
+    
+#         return f" {num_of_days} days are {num_of_days * calculation_to_units} {name_of_unit}"
+
+#         return " you entered a 0, please enter a valid positive number"
+
+# def validate_and_execute():
+#     try:
+
+
+#         user_input_number = int(user_input)
+#         if user_input_number > 0:
+#             calculated_value = days_to_units(user_input_number)
+#             print(calculated_value)
+#         elif user_input_number == 0:
+#             print("you entered a 0, please enter a valid positive number")
+#         else:
+#             print("you entered a negative number, no conversion for you!")
+#     except ValueError:
+#         print("your input is not a valid number. Don't ruin my program!")
+
+# while True:
+#     user_input = input("hey user, enter a number of days and I will convert it to hours!")
+#     validate_and_execute()
+
+
+# # while loops
+
+
 calculation_to_units = 24
 name_of_unit = "hours"
 
@@ -109,18 +168,29 @@ def days_to_units(num_of_days):
         return " you entered a 0, please enter a valid positive number"
 
 def validate_and_execute():
-    if user_input.isdigit():
+    try:
+
+
         user_input_number = int(user_input)
         if user_input_number > 0:
             calculated_value = days_to_units(user_input_number)
             print(calculated_value)
         elif user_input_number == 0:
-            print("\you entered a 0, please enter a valid positive number")
-    else:
-        print("your input is not a valid number. Don't ruin my program!")
-    
-user_input = input("hey user, enter a number of days and I will convert it to hours!")
-validate_and_execute()
+            print("you entered a 0, please enter a valid positive number")
+        else:
+            print("you entered a negative number, no conversion for you!")
+    # except ValueError:
+    #     print("your input is not a valid number. Don't ruin my program!")
 
-# Error Handling
+# user_input = ""
+# while user_input != "exit":
+#     user_input = input("hey user, enter a number of days and I will convert it to hours!\n")
+    validate_and_execute()
+
+
+#class and objects
+
+
+
+
 
